@@ -14,8 +14,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </CartProvider>
       </FilterProvider>
     </SortProvider>
-
   </ProductProvider>
-
-
 )

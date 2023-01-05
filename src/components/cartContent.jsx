@@ -8,7 +8,7 @@ const Wrapper = styled.section`
     .items 
     {
         width:inherit;
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     .headers 
     {
@@ -121,24 +121,32 @@ const Wrapper = styled.section`
     }
     .totalBox 
     {
-        width: 200px;
-        height: 200px;
-        border:1px solid #ab7a5f;
+        width: fit-content;
+        height: fit-content;
+        border:1px solid gray;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding:20px;
+        margin-left:auto;
     }
-    .totalPrice 
+    .totalBox-common 
     {
         display: flex;
         justify-content: space-between;
+        gap:100px;
+        margin:30px;
+
     }
-    .shipping 
+    .subtotal-head
     {
-           display: flex;
-        justify-content: space-between;
+        font-size: 1.5rem;
+        font-weight: bolder;
     }
-    .orderContainer 
+    .totalBox-login 
     {
-           display: flex;
-        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        padding:20px;
     }
 `;
 const Empty = styled.section`
@@ -217,19 +225,20 @@ const CartContent = () => {
 
                 </div>
                 <div className="totalBox">
-                    <div className="totalPrice">
-                        <div>Subtotal</div>
+                    <div className="totalPrice totalBox-common">
+                        <div className="subtotal-head">Subtotal:</div>
                         <div>{totalPrice}</div>
                     </div>
-                    <div className="shipping">
+                    <div className="shipping totalBox-common">
                         <div>shipping:</div>
                         <div className="shippingPrice">$534</div>
                     </div>
                     <hr />
-                    <div className="orderContainer">
+                    <div className="orderContainer totalBox-common">
                         <div className="order">Order:</div>
                         <div className="orderPrice">${parseInt(totalPrice) + parseInt(543)}</div>
                     </div>
+                    <button className="totalBox-login">login</button>
                 </div>
             </Wrapper>
         )
