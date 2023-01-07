@@ -66,6 +66,7 @@ export const CartProvider = ({ children }) => {
         setCarts([...newCarts]);
     }
     const clearList = () => {
+        setCarts([]);
         dispatch({ type: "CLEAR" });
     }
     return <cartContext.Provider

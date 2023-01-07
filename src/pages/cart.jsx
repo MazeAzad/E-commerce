@@ -6,6 +6,7 @@ const Wrapper = styled.section`
     {
          width: 78.1vw;
          margin:auto;
+         padding-bottom: 150px;
     }
    
 `;

@@ -24,10 +24,10 @@ export const reducer = (state, action) => {
         }
     }
     if (action.type === "CLEAR") {
+        console.log("clear");
         localStorage.clear();
         return {
             ...state,
-            allCarts: [],
             totalPrice: 0,
             totalCount: 0
         }
