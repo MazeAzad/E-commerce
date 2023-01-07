@@ -46,7 +46,11 @@ const Wrapper = styled.section`
             top:7px;
             font-size:1.8rem;
             color:red;
-             
+            
+        }
+        .productContainer
+        {
+            padding-bottom: 250px;
         }
     }
 `;

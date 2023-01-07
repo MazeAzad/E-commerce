@@ -153,6 +153,8 @@ const Wrapper = styled.section`
             display: block;
             padding-top:50px;
             display: flex;
+            height: 100vh;
+            
         }
         #search 
         {
